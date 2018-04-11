@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css?family=Maven+Pro');
+
+body {
+font-family: 'Maven Pro', sans-serif;
+}
+
+.btn-danger {
+    color: #dc3545;
+    background-color: #ffffff;
+    border-color: #dc3545;
+    width: 100px;
+
+  }
+
+.add-btn {
+  background-color: #27ccc0;
+  border-color: #27ccc0;
+  font-size: 18px;
+  width: 140px;
+  color: #fff;
+}
+
+.list-name {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.main-items-block {
+  border: 1.5px #dedede;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  min-height: 450px;
+  width: 500px;
+  float: left;
+  margin-top: 30px;
+  margin-left: 230px;
+  padding-top: 20px;
+}
+.form-inline .form-control {
+    width: 300px;
+    border: 1px #dedede;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.main-list-box {
+display: flex;
+flex-direction: column;
+min-height: 60px;
+}
+
+
+.list-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 60px;
+    border-bottom: 1px solid #dedede;
+}
+
+.second-list-box {
+    padding: 0 25px;
+}
+.second-list-box:focus {
+  border-left: 2px solid red;
+}  
+
+legend {
+    margin-left: 0.6rem;
+}
+
+.form-inline {
+    margin: 0 7px;
+}
+
+
+/*COMENTS*/
+
+ .contact {
+  display: flex;
+  align-items: flex-start;
+  font-family: sans-serif;
+  width: 100%;
+  padding: 5px;
+  
+} 
+
+.contact-image {
+  margin: 0 10px;
+}
+
+textarea {
+  width: 360px;
+  min-height: 80px;
+  border: 1px #dedede;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5)
+}
+
+
+
+.comment-form {
+    display: flex;
+    position: relative;
+    margin-top: 50px;
+}
+
+
+
+.box-1 {
+  border: 1px solid #dedede;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  width: 460px;
+  min-height: 200px;
+  padding-bottom: 20px;
+  justify-content: flex-end;
+  flex-direction: column;
+  position: absolute;
+  margin-left: 750px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  display: flex;
+}
+
+
+
+.comment-box {
+    max-width: 450px;
+    display: flex;
+    margin: 0 10px;
+    margin-top: 50px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dedede;
+}
+
+img {
+    margin-right: 8px;
+}
+
+p {
+  white-space: normal;
+}
+
+.store--block{
+  display: flex;
+}
+.comment-counter {
+    align-self: center;
+    background-color: #27ccc0;
+    width: 40px;
+    margin-left: 15px;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: 400;
+}
+
+.name-count {
+    display: flex;
+    width: 350px;
+    height: 60px;
+    align-items: center;
+}
+
+
+.dairy-col {
+    background-color: #2b2f3e;
+    width: 210px;
+    height: 100%;
+    position: absolute;
+    color: #fff;
+    padding-top: 20px;
+}
+
+.dairy-col p {
+    color: #6f7073;
+}
+.contact-image {
+  background-color: #2b2f3e;
+}
