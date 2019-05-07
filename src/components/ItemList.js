@@ -5,43 +5,68 @@ import Store from './Store';
 import Item from './Item';
 
 
-class Items extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = { 
-      items: []
-    }
-    
-
-  }
-
-  onClickToAddItem = (event) => {
-    var regNa = /^[A-Za-zА-Яа-яЁё0-9]{3,30}$/;
-    if( regNa.test(this.refs.userName.value) == true ) {
-    this.props.addItem(
-      {
-        id: this.props.validId, 
-        name:this.refs.userName.value,
-        comments:[
-          
-        ]
-      }
-    );
-  } else {
-  	alert('Enter your item')
-  }
-}
+class Items extends Component {
   
+  onClickToAddItem = (event) => {
+    var regNa = /^[A-Za-zА-Яа-яЁё0-9 _.,!(){}\[\]+=]{3,30}$/;
+    var arr = this.props.itemsList;
+    var doublicateName = true;
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i].name === this.refs.userName.value) {
+            doublicateName = false
+        }
+    }
+    if(regNa.test(this.refs.userName.value) === true && doublicateName) {
+      this.props.addItem(
+        {
+          id: this.props.validId, 
+          name:this.refs.userName.value,
+          comments:[
+            
+          ]
+        }
+      );
+    }else !doublicateName ? alert('Name is already used') : alert('Enter your item name please');
+  }
+  
+  preventSubmit = (event)  =>{
+    event.preventDefault();
+  }
 
+  handleKeyPress = (event) => {
+    if(event.charCode == 13){
+        var regNa = /^[A-Za-zА-Яа-яЁё0-9 _.,!(){}\[\]+=]{3,30}$/;
+        var arr = this.props.itemsList;
+        var doublicateName = true;
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i].name === this.refs.userName.value) {
+                doublicateName = false
+            }
+        }
+        if(regNa.test(this.refs.userName.value) === true && doublicateName) {
+          this.props.addItem(
+            {
+              id: this.props.validId, 
+              name:this.refs.userName.value,
+              comments:[
+                
+              ]
+            }
+          );
+          this.refs.userName.value = '';
+        }else !doublicateName ? alert('Name is already used') : alert('Enter your item name please');
+    }
+  }
+
+  
   render() {
       return (
         <div className='main-items-block'>
             <div>
-              <form className="form-inline">
+              <form className="form-inline" onSubmit={this.preventSubmit}>
               <legend><h2>Items</h2></legend>
               <div className="form-group mx-sm-3">
-                <input type="text" className="form-control"  ref="userName" placeholder="Type name here..."/>
+                <input type="text" className="form-control"  onKeyPress={this.handleKeyPress} ref="userName" placeholder="Type name here..."/>
               </div>
               <button type='reset' className="btn add-btn" onClick={this.onClickToAddItem} >Add new</button>
       

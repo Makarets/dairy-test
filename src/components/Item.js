@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import './style.css';
 import Bootstrap from 'bootstrap/dist/css/bootstrap.css';
-import Store from './Store';
-import Items from './ItemList';
 
-class Item extends React.Component{
+class Item extends Component {
   onClickToDeleteSelf = (event) => {
     this.props.deleteSelf(this.props.itemInfo.id);
   }

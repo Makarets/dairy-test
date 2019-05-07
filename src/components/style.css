@@ -20,6 +20,24 @@ font-family: 'Maven Pro', sans-serif;
   color: #fff;
 }
 
+.btn.clear-btn {
+    width: 125px;
+    color: #6f7073;
+    font-size: 17px;
+    display: block;
+    margin: 0 auto;
+    outline: none;
+    text-shadow: 2px 2px 3px rgba(255,255,255,0.1);
+}
+.btn.clear-btn:hover{
+    color: #000000;
+}
+.btn.clear-btn:focus {
+    box-shadow: none;
+
+}
+
+
 .list-name {
     font-size: 18px;
     font-weight: 600;
@@ -82,12 +100,8 @@ legend {
   
 } 
 
-.contact-image {
-  margin: 0 10px;
-}
-
 textarea {
-  width: 360px;
+  width: 100%;
   min-height: 80px;
   border: 1px #dedede;
   box-shadow: 0 0 10px rgba(0,0,0,0.5)
@@ -96,12 +110,28 @@ textarea {
 
 
 .comment-form {
-    display: flex;
-    position: relative;
-    margin-top: 50px;
+  display: flex;
+  position: relative;
+    margin: 0px 30px;
+  margin-top: 50px;
 }
 
+.comment-form img.contact-image {
+   width: 85px;
+   height: 80px;
+}
 
+.comment-form div {
+    width: 80%;
+}
+
+.incorr_comment {
+  color: red;
+  margin-bottom: 0px;
+  text-align: center;
+  font-size: 13px;
+  display: none;
+}
 
 .box-1 {
   border: 1px solid #dedede;
@@ -118,26 +148,24 @@ textarea {
   display: flex;
 }
 
-
-
-.comment-box {
-    max-width: 450px;
-    display: flex;
-    margin: 0 10px;
-    margin-top: 50px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #dedede;
+.box-1 h2 {
+  margin: 20px 0px;
 }
 
-img {
-    margin-right: 8px;
+.comment-box {
+  max-width: 450px;
+  display: flex;
+  margin: 0 30px;
+  margin-top: 50px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #dedede;
 }
 
 p {
   white-space: normal;
 }
 
-.store--block{
+.store-block{
   display: flex;
 }
 .comment-counter {
@@ -170,6 +198,39 @@ p {
 .dairy-col p {
     color: #6f7073;
 }
-.contact-image {
-  background-color: #2b2f3e;
+
+
+.user-img {
+  width: 60px;
+  margin-right: 10px;
+}
+
+.comment-text {
+  padding-top: 5px;
+  padding-left: 5px;
+}
+.comments-container {
+  max-height: 425px;
+  overflow-y: scroll;
+}
+
+/*scroll bar*/
+#scroll::-webkit-scrollbar {
+  width: 5px;
+  background-color: #F5F5F5;
+}
+
+#scroll::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: linear-gradient(left, #96A6BF, #63738C);
+  box-shadow: inset 0 0 1px 1px #5C6670;
+}
+
+#scroll::-webkit-scrollbar-track {
+  border-radius: 5px;
+  margin-top: 30px;
+}
+
+#scroll::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(left, #8391A6, #536175);
 }
